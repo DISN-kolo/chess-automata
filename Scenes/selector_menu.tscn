@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://qqr4o5fdnsyy" path="res://Scripts/selector_menu.gd" id="1_7f51a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwbc6"]
-bg_color = Color(1, 1, 1, 0.09019608)
+bg_color = Color(0.41791436, 0.41791445, 0.4179144, 0.39215687)
 
 [node name="SelectorMenu" type="Control" unique_id=2059419299]
 layout_mode = 3
@@ -106,3 +106,6 @@ offset_right = -49.0
 offset_bottom = 53.0
 grow_horizontal = 0
 text = "X"
+
+[connection signal="pressed" from="GeneratorMenuBars/GenPromptButton" to="." method="_on_gen_prompt_button_pressed"]
+[connection signal="pressed" from="XPromptButton" to="." method="_on_x_prompt_button_pressed"]

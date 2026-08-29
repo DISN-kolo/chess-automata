@@ -16,13 +16,33 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_f6mw1"]
 gradient = SubResource("Gradient_rvq8p")
 
-[node name="Tile" type="Node2D" unique_id=1957412977]
+[node name="Tile" type="Control" unique_id=22535202]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_xsjyq")
 
-[node name="Back" type="Sprite2D" parent="." unique_id=2039211796]
+[node name="Back" type="TextureRect" parent="." unique_id=1912264988]
 unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_8t6u8")
+expand_mode = 1
 
-[node name="Fill" type="Sprite2D" parent="." unique_id=315957894]
+[node name="Fill" type="TextureRect" parent="." unique_id=598203795]
 unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_f6mw1")
+expand_mode = 1

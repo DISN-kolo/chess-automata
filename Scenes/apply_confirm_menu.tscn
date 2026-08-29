@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ckjoals5qg47f"]
+
+[ext_resource type="Script" uid="uid://ivh3hp2vdfps" path="res://Scripts/apply_confirm_menu.gd" id="1_bwtkk"]
+
+[node name="ApplyConfirmMenu" type="Control" unique_id=73811942]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bwtkk")
+
+[node name="BackgroundConfirm" type="Panel" parent="." unique_id=922465223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxCloseDialog" type="VBoxContainer" parent="." unique_id=1172799115]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextConfirm" type="Label" parent="VBoxCloseDialog" unique_id=579351179]
+layout_mode = 2
+text = "Wanna quit the menu without applying anything?"
+
+[node name="HBoxButtonsClose" type="HBoxContainer" parent="VBoxCloseDialog" unique_id=109168693]
+layout_mode = 2
+alignment = 1
+
+[node name="NoButton" type="Button" parent="VBoxCloseDialog/HBoxButtonsClose" unique_id=491503869]
+layout_mode = 2
+text = "No, stop!"
+
+[node name="YepButton" type="Button" parent="VBoxCloseDialog/HBoxButtonsClose" unique_id=1996962929]
+layout_mode = 2
+text = "Yep"
+
+[connection signal="pressed" from="VBoxCloseDialog/HBoxButtonsClose/NoButton" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="VBoxCloseDialog/HBoxButtonsClose/YepButton" to="." method="_on_yep_button_pressed"]
