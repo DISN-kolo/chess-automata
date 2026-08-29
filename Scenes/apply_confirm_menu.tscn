@@ -35,7 +35,8 @@ grow_vertical = 2
 
 [node name="TextConfirm" type="Label" parent="VBoxCloseDialog" unique_id=579351179]
 layout_mode = 2
-text = "Wanna quit the menu without applying anything?"
+text = "Apply?"
+horizontal_alignment = 1
 
 [node name="HBoxButtonsClose" type="HBoxContainer" parent="VBoxCloseDialog" unique_id=109168693]
 layout_mode = 2

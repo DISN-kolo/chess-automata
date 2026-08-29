@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 
 func apply_field_parameters() -> void:
 	field_resizing.emit(dim.x, dim.y);
+	self.queue_free();
 
 func _on_x_prompt_button_pressed() -> void:
 	var ccm_instance: CloseConfirmMenu = CLOSE_CONFIRM_MENU.instantiate();
