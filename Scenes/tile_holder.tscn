@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://v56s8xgx8iui"]
+
+[ext_resource type="Script" uid="uid://dlfpvmgb0t5rv" path="res://Scripts/tile_holder.gd" id="1_r0ifm"]
+
+[node name="TileHolder" type="Node2D" unique_id=1163836858]
+script = ExtResource("1_r0ifm")

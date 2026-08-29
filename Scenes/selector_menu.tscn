@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://ctbl75g3ldp34"]
+
+[ext_resource type="Script" uid="uid://qqr4o5fdnsyy" path="res://Scripts/selector_menu.gd" id="1_7f51a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwbc6"]
+bg_color = Color(1, 1, 1, 0.09019608)
+
+[node name="SelectorMenu" type="Control" unique_id=2059419299]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7f51a")
+
+[node name="BackgroundForMenu" type="Panel" parent="." unique_id=984098395]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fwbc6")
+
+[node name="GeneratorMenuBars" type="VBoxContainer" parent="." unique_id=260617546]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 41.0
+offset_right = 401.0
+offset_bottom = 214.0
+metadata/_edit_group_ = true
+
+[node name="XAllCont" type="VBoxContainer" parent="GeneratorMenuBars" unique_id=485659267]
+layout_mode = 2
+
+[node name="XLabel" type="Label" parent="GeneratorMenuBars/XAllCont" unique_id=1665779240]
+layout_mode = 2
+text = "Horizontal tiles"
+
+[node name="XSlideCont" type="HBoxContainer" parent="GeneratorMenuBars/XAllCont" unique_id=453203373]
+layout_mode = 2
+
+[node name="XSlider" type="HSlider" parent="GeneratorMenuBars/XAllCont/XSlideCont" unique_id=879577162]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(304, 40)
+layout_mode = 2
+min_value = 5.0
+max_value = 35.0
+value = 5.0
+rounded = true
+scrollable = false
+tick_count = 31
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="XVal" type="Label" parent="GeneratorMenuBars/XAllCont/XSlideCont" unique_id=665923277]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+horizontal_alignment = 2
+
+[node name="YAllCont" type="VBoxContainer" parent="GeneratorMenuBars" unique_id=529120629]
+layout_mode = 2
+
+[node name="YLabel" type="Label" parent="GeneratorMenuBars/YAllCont" unique_id=2059380209]
+layout_mode = 2
+text = "Vertical tiles"
+
+[node name="YSlideCont" type="HBoxContainer" parent="GeneratorMenuBars/YAllCont" unique_id=1382567264]
+layout_mode = 2
+
+[node name="YSlider" type="HSlider" parent="GeneratorMenuBars/YAllCont/YSlideCont" unique_id=195653848]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(304, 40)
+layout_mode = 2
+min_value = 5.0
+max_value = 35.0
+value = 5.0
+rounded = true
+scrollable = false
+tick_count = 31
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="YVal" type="Label" parent="GeneratorMenuBars/YAllCont/YSlideCont" unique_id=1751893990]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+horizontal_alignment = 2
+
+[node name="GenPromptButton" type="Button" parent="GeneratorMenuBars" unique_id=1269309012]
+layout_mode = 2
+text = "Generate field"
+
+[node name="XPromptButton" type="Button" parent="." unique_id=236136440]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.0
+offset_top = 28.0
+offset_right = -49.0
+offset_bottom = 53.0
+grow_horizontal = 0
+text = "X"

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://mmp38blspjtq"]
+
+[ext_resource type="Script" uid="uid://d636w5mhrrjo" path="res://Scripts/tile.gd" id="1_xsjyq"]
+
+[sub_resource type="Gradient" id="Gradient_xsjyq"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8t6u8"]
+gradient = SubResource("Gradient_xsjyq")
+
+[sub_resource type="Gradient" id="Gradient_rvq8p"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f6mw1"]
+gradient = SubResource("Gradient_rvq8p")
+
+[node name="Tile" type="Node2D" unique_id=1957412977]
+script = ExtResource("1_xsjyq")
+
+[node name="Back" type="Sprite2D" parent="." unique_id=2039211796]
+unique_name_in_owner = true
+texture = SubResource("GradientTexture2D_8t6u8")
+
+[node name="Fill" type="Sprite2D" parent="." unique_id=315957894]
+unique_name_in_owner = true
+texture = SubResource("GradientTexture2D_f6mw1")
