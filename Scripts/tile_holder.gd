@@ -102,4 +102,11 @@ func calculate_step() -> void:
 			tile_refs[i].change_colors(
 				Globals.colorscheme[current_map[i]],
 			);
+		# added rule: if more than 1 claim, empty the tile.
+		# knight started winning after that
+		if (len(desire_map[i]) > 1):
+			current_map[i] = Globals.ChessPiece.EMPTY;
+			tile_refs[i].change_colors(
+				Globals.colorscheme[current_map[i]],
+			);
 		desire_map[i] = {};
