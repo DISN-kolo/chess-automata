@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c6wguybwc4vvb"]
 
 [ext_resource type="Script" uid="uid://c6n54wor7gxpj" path="res://Scripts/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://drtj42jpedhxa" path="res://Scripts/toggle_place.gd" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://d1cx3ilfmlsem" path="res://Scenes/selector.tscn" id="3_8gbba"]
 
 [node name="Main" type="Control" unique_id=1247385691]
 layout_mode = 3
@@ -11,10 +13,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jjgbg")
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2026521249]
+[node name="GenMenuButton" type="Button" parent="." unique_id=1596812436]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 61.0
+offset_top = 45.0
+offset_right = 206.0
+offset_bottom = 76.0
+focus_mode = 0
+text = "Generation menu"
+
+[node name="PlacementVBox" type="VBoxContainer" parent="." unique_id=1051546381]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = -67.0
+offset_right = 210.0
+grow_vertical = 0
+
+[node name="TogglePlace" type="CheckButton" parent="PlacementVBox" unique_id=488045720]
+layout_mode = 2
+text = "Tile placement mode"
+script = ExtResource("2_bo1nx")
+
+[node name="WhatToPlaceGrid" type="GridContainer" parent="PlacementVBox" unique_id=1933888147]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 6
+
+[node name="Selector" parent="PlacementVBox/WhatToPlaceGrid" unique_id=1021911558 instance=ExtResource("3_8gbba")]
+layout_mode = 2
+
+[connection signal="pressed" from="GenMenuButton" to="." method="_on_gen_menu_button_pressed"]

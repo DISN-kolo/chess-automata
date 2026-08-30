@@ -46,11 +46,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(304, 40)
 layout_mode = 2
 min_value = 5.0
-max_value = 35.0
+max_value = 20.0
 value = 5.0
 rounded = true
 scrollable = false
-tick_count = 31
+tick_count = 16
 ticks_on_borders = true
 ticks_position = 3
 
@@ -76,11 +76,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(304, 40)
 layout_mode = 2
 min_value = 5.0
-max_value = 35.0
+max_value = 20.0
 value = 5.0
 rounded = true
 scrollable = false
-tick_count = 31
+tick_count = 16
 ticks_on_borders = true
 ticks_position = 3
 

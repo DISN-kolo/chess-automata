@@ -16,6 +16,16 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_f6mw1"]
 gradient = SubResource("Gradient_rvq8p")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwbc6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhrdi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ahyqj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gukiy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tm5cs"]
+
 [node name="Tile" type="Control" unique_id=22535202]
 layout_mode = 3
 anchors_preset = 15
@@ -46,3 +56,25 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_f6mw1")
 expand_mode = 1
+
+[node name="Clickable" type="Button" parent="." unique_id=627925225]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fwbc6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hhrdi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ahyqj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gukiy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tm5cs")
+
+[connection signal="pressed" from="Clickable" to="." method="_on_clickable_pressed"]

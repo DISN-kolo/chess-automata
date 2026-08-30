@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://d1cx3ilfmlsem"]
+
+[ext_resource type="Script" uid="uid://dqf5bdelegccg" path="res://Scripts/selector.gd" id="1_22fom"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwbc6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhrdi"]
+bg_color = Color(0.6, 0.6, 0.6, 0.4627451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahyqj"]
+bg_color = Color(0.6, 0.6, 0.6, 0.26666668)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gukiy"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0.7921569)
+
+[node name="Selector" type="Control" unique_id=1021911558]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_22fom")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=262746681]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectorBtn" type="Button" parent="." unique_id=593755917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fwbc6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hhrdi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ahyqj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gukiy")
+toggle_mode = true

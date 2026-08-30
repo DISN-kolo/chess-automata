@@ -6,19 +6,29 @@ const TILE_HOLDER = preload("uid://v56s8xgx8iui")
 
 var tholder_instance: TileHolder = null;
 
+var placement_on: bool = false;
+
 func _on_asked_to_resize(x: int, y: int) -> void:
 	if (tholder_instance != null):
 		tholder_instance.kill_tiles();
-		tholder_instance.x_dim = x;
-		tholder_instance.y_dim = y;
+		tholder_instance.dim = Vector2i(x, y);
 		tholder_instance.spawn_tiles();
 
-func spawn_menu() -> void:
+func spawn_gen_menu() -> void:
 	var smi = SELECTOR_MENU.instantiate();
 	smi.field_resizing.connect(_on_asked_to_resize);
+	smi.tree_exiting.connect(_on_smi_exiting);
 	add_child(smi);
 
 func _ready() -> void:
 	tholder_instance = TILE_HOLDER.instantiate();
 	add_child(tholder_instance);
-	spawn_menu();
+	#spawn_gen_menu();
+
+
+func _on_gen_menu_button_pressed() -> void:
+	%GenMenuButton.visible = false;
+	spawn_gen_menu();
+
+func _on_smi_exiting() -> void:
+	%GenMenuButton.visible = true;

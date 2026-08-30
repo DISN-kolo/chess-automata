@@ -1,0 +1,2 @@
+extends CheckButton
+class_name TogglePlace
