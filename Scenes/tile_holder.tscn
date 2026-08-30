@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_r0ifm")
+tile_size = null
 
 [node name="CenterHolder" type="CenterContainer" parent="." unique_id=524043062]
 unique_name_in_owner = true
